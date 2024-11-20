@@ -25,20 +25,38 @@ const Header = () => {
           <img src="/images/xora.svg" width={155} height={55} alt="xora" />
         </a>
 
-        <div className="w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0">
+        <div className={clsx("w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0", isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none",)}>
           <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-hidden max-md:px-4">
+           
+           
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block max-lg:px-12">
                 <li className="nav-li">
                   <NavLink title="features" />
-                </li>
-                <div className="dot" />
-                <li>
+                  <div className="dot" />
                   <NavLink title="pricing" />
                 </li>
 
+
+
                 <li className="nav-logo">
-                  <LinkScroll>
+                  <LinkScroll
+                    to="hero"
+                    offset={-250}
+                    spy
+                    smooth
+                    className={clsx(
+                      "max-lg:hidden transition-transform duration-500 cursor-pointer",
+                    )}
+                  >
+
+
+
+
+
+
+
+                      
                     <img
                       src="/images/xora.svg"
                       width={160}
@@ -50,25 +68,45 @@ const Header = () => {
 
                 <li className="nav-li">
                   <NavLink title="faq" />
-                </li>
                 <div className="dot" />
-                <li>
-                  <NavLink title="download" />
+                <NavLink title="download" />
                 </li>
               </ul>
             </nav>
+
+            <div className="lg:block absolute top:1/2 left:0 w-[960px] h-[380px] translate-x-[-290px] translate-y-1/2 rotate-90">
+              <img 
+              src="/images/bg-outlines.svg"
+              width={960}
+              height={380}
+              alt="outline"
+              className="relative z-2"
+             />
+             
+             <img 
+              src="/images/bg-outlines-fill.png"
+              width={960}
+              height={380}
+              alt="outline"
+              className="absolute inset-0 mix mix-blend-soft-light opacity-5"
+             />  
+            </div>
+
+
+
           </div>
         </div>
 
 
-        <button className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center" onClick={() => setIsOpen((prevState) => !prevState   )}>
+        <button className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center" onClick={() => setIsOpen((prevState) => !prevState)}>
 
 
-          <img src="/images/magic.svg" />
-
-
-
-        </button>
+        <img
+            src={`/images/${isOpen ? "close" : "magic"}.svg`}
+            alt="magic"
+            className="size-1/2 object-contain"
+          />
+</button>
 
 
 
