@@ -29,47 +29,37 @@ const Header = () => {
           <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-hidden max-md:px-4">
            
            
-            <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
-              <ul className="flex max-lg:block max-lg:px-12">
-                <li className="nav-li">
+            <nav className="max-lg:relative max-lg:z-0 max-lg:my-auto">
+              <ul className="flex z-10 max-lg:block max-lg:px-12">
+              <li className="nav-li z-10">
                   <NavLink title="features" />
                   <div className="dot" />
                   <NavLink title="pricing" />
                 </li>
 
-
-
                 <li className="nav-logo">
                   <LinkScroll
                     to="hero"
-                    offset={-250}
+                    offset={-100}
                     spy
                     smooth
                     className={clsx(
                       "max-lg:hidden transition-transform duration-500 cursor-pointer",
                     )}
                   >
-
-
-
-
-
-
-
-                      
                     <img
                       src="/images/xora.svg"
                       width={160}
                       height={55}
-                      alt="Logo"
+                      alt="logo"
                     />
                   </LinkScroll>
                 </li>
 
                 <li className="nav-li">
                   <NavLink title="faq" />
-                <div className="dot" />
-                <NavLink title="download" />
+                  <div className="dot" />
+                  <NavLink title="download" />
                 </li>
               </ul>
             </nav>
@@ -88,7 +78,7 @@ const Header = () => {
               width={960}
               height={380}
               alt="outline"
-              className="absolute inset-0 mix mix-blend-soft-light opacity-5"
+              className="absolute inset-0 mix mix-blend-soft-light opacity-5 z-0"
              />  
             </div>
 
