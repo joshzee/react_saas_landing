@@ -21,17 +21,17 @@ const Header = () => {
 
 
       <div className="container flex h-14 items-center max-lg:px-5">
-        <a className="lg:hidden flex-1 cursor-pointer z-2">
-          <img src="/images/xora.svg" width={155} height={55} alt="xora" />
+        <a className="lg:hidden flex-1 z-2">
+          <img src="/images/xora.svg" width={155} height={55} alt="xora" className="cursor-pointer" />
         </a>
 
         <div className={clsx("w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0", isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none",)}>
           <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-hidden max-md:px-4">
            
            
-            <nav className="max-lg:relative max-lg:z-0 max-lg:my-auto">
-              <ul className="flex z-10 max-lg:block max-lg:px-12">
-              <li className="nav-li z-10">
+            <nav className="max-lg:relative max-lg:z-10 max-lg:my-auto">
+              <ul className="cursor-pointer flex max-lg:z-10 max-lg:block max-lg:px-12">
+              <li className="nav-li max-lg:z-10">
                   <NavLink title="features" />
                   <div className="dot" />
                   <NavLink title="pricing" />
@@ -64,7 +64,7 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="lg:block absolute top:1/2 left:0 w-[960px] h-[380px] translate-x-[-290px] translate-y-1/2 rotate-90">
+            <div className="lg:block absolute top:1/2 left:0 w-[960px] h-[380px] translate-x-[-290px] translate-y-1/2 rotate-90 z-0">
               <img 
               src="/images/bg-outlines.svg"
               width={960}
@@ -78,7 +78,7 @@ const Header = () => {
               width={960}
               height={380}
               alt="outline"
-              className="absolute inset-0 mix mix-blend-soft-light opacity-5 z-0"
+              className="absolute inset-0 mix mix-blend-soft-light opacity-5 z-2"
              />  
             </div>
 
