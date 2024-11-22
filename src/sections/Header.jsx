@@ -30,7 +30,7 @@ const Header = () => {
            
            
             <nav className="max-lg:relative max-lg:z-10 max-lg:my-auto">
-              <ul className="cursor-pointer flex max-lg:z-10 max-lg:block max-lg:px-12">
+              <ul className="cursor-pointer flex z-20 relative max-lg:block max-lg:px-12">
               <li className="nav-li max-lg:z-10">
                   <NavLink title="features" />
                   <div className="dot" />
